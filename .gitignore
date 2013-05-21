@@ -2,3 +2,11 @@
 
 #ignore build directory
 build/
+
+#Eclipse . files
+.classpath
+.project
+.settings
+
+#target file which has jar
+target/
