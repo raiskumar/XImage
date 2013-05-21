@@ -9,11 +9,11 @@ import java.util.Collections;
 
 import javax.imageio.ImageIO;
 
-import org.ximage.common.XImageException;
+import org.ximage.Image;
+import org.ximage.common.XimageException;
 import org.ximage.common.Util;
 import org.ximage.parser.HtmlDoc;
 import org.ximage.parser.HtmlDoc.HtmlImage;
-import org.ximage.service.Image;
 
 /**
  * Performs below task :
@@ -27,9 +27,9 @@ import org.ximage.service.Image;
 public class SizeFilter implements Filter {
 	final static private int MINIMUM_LENGTH = 50;
 	
-	public HtmlDoc execute(HtmlDoc doc) throws XImageException {
+	public HtmlDoc execute(HtmlDoc doc) throws XimageException {
 		if(Util.isNull(doc)){
-			throw new XImageException("500", "Parsing failed");
+			throw new XimageException("500", "Parsing failed");
 		}
 		
 		HtmlDoc processed = new HtmlDoc();

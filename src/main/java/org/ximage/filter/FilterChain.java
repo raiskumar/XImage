@@ -3,9 +3,9 @@ package org.ximage.filter;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.ximage.common.XImageException;
+import org.ximage.Image;
+import org.ximage.common.XimageException;
 import org.ximage.parser.HtmlDoc;
-import org.ximage.service.Image;
 
 
 public class FilterChain {
@@ -17,7 +17,7 @@ public class FilterChain {
 		chain.add(new KeywordFilter());
 	}
 	
-	public Image filterArticleImage(HtmlDoc html) throws XImageException{
+	public Image filterArticleImage(HtmlDoc html) throws XimageException{
 		Image image = new Image();
 		HtmlDoc processed = html;
 		

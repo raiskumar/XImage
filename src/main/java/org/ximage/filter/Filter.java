@@ -1,6 +1,6 @@
 package org.ximage.filter;
 
-import org.ximage.common.XImageException;
+import org.ximage.common.XimageException;
 import org.ximage.parser.HtmlDoc;
 
 /**
@@ -9,5 +9,5 @@ import org.ximage.parser.HtmlDoc;
  *
  */
 public interface Filter {
-	public HtmlDoc execute(HtmlDoc doc) throws XImageException;
+	public HtmlDoc execute(HtmlDoc doc) throws XimageException;
 }

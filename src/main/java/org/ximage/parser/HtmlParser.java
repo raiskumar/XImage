@@ -2,10 +2,10 @@ package org.ximage.parser;
 
 import java.io.IOException;
 
-import org.ximage.common.XImageException;
+import org.ximage.Image;
+import org.ximage.common.XimageException;
 import org.ximage.common.Util;
 import org.ximage.filter.SizeFilter;
-import org.ximage.service.Image;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,11 +19,10 @@ import org.jsoup.select.Elements;
  */
 public class HtmlParser {
 	
-	public HtmlDoc extractImages(String url) throws XImageException {
+	public HtmlDoc extractImages(String url) throws XimageException {
 		HtmlDoc html = new HtmlDoc();
 		try {
 			Document doc = Jsoup.connect(url).userAgent("Mozilla").get();  //It’s recommended to specify a “userAgent” in Jsoup, to avoid HTTP 403 error messages
-			
 			String title = "";
 			
 			if(!Util.isNull(doc.getElementById("title"))){
@@ -52,7 +51,7 @@ public class HtmlParser {
 			}
 
 		} catch (IOException e) {
-			throw new XImageException("500", "Unable to read given uri :"+ e.getCause());
+			throw new XimageException("500", "Unable to read given uri :"+ e.getCause());
 		}
 		return html;
 	}
@@ -61,9 +60,9 @@ public class HtmlParser {
 	 * Get width and height of the given image
 	 * @param uri
 	 * @return Image
-	 * @throws XImageException 
+	 * @throws XimageException 
 	 */
-	public Image getImageDimension(String uri) throws XImageException{
+	public Image getImageDimension(String uri) throws XimageException{
 		HtmlDoc doc = new HtmlDoc();
 		HtmlDoc.HtmlImage img = new HtmlDoc.HtmlImage();
 		img.setUrl(uri);
@@ -73,7 +72,7 @@ public class HtmlParser {
 		HtmlDoc html = sz.fetchImageSize(doc);
 		
 		if(Util.isNull(uri) || html.getImages().isEmpty()){
-			throw new XImageException("400", "Invalid Image URL");
+			throw new XimageException("400", "Invalid Image URL");
 		}
 		Image image = new Image();
 		image.setUrl(uri);

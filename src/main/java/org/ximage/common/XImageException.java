@@ -5,12 +5,12 @@ package org.ximage.common;
  * @author Siddheshwar rai.skumar@gmail.com
  *
  */
-public class XImageException extends Exception{
+public class XimageException extends Exception{
 	private static final long serialVersionUID = 1L;
 	private String code;
 	private String message;
 	
-	public XImageException(String code, String message) {
+	public XimageException(String code, String message) {
 		super();
 		this.code = code;
 		this.message = message;

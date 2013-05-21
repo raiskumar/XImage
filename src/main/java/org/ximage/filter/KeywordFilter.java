@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.ximage.common.XImageException;
+import org.ximage.common.XimageException;
 import org.ximage.common.Util;
 import org.ximage.parser.HtmlDoc;
 import org.ximage.parser.HtmlDoc.HtmlImage;
@@ -18,9 +18,9 @@ public class KeywordFilter implements Filter {
 		hashed.addAll(Arrays.asList(keywords.split(",")));
 	}
 	
-	public HtmlDoc execute(HtmlDoc doc) throws XImageException {
+	public HtmlDoc execute(HtmlDoc doc) throws XimageException {
 		if(Util.isNull(doc)){
-			throw new XImageException("500", "Parsing failed");
+			throw new XimageException("500", "Parsing failed");
 		}
 		
 		HtmlDoc processed = new HtmlDoc();
