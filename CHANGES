@@ -1,0 +1,7 @@
+Ximage changelog
+
+*** Release 1.1 (2013-May-21)
+ * Refactored code for reability, Added .gitignore file, improved package names
+
+*** Release 1.0 (2013-May-18)
+ * Initial release of Ximage
