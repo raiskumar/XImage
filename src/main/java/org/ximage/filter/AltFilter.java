@@ -56,7 +56,7 @@ public class AltFilter implements Filter {
 	
 	private String parseImageName(String imgUrl){
 		String name = "";
-		if(imgUrl != null){
+		if(!Util.isEmpty(imgUrl)){
 			String[] arr = imgUrl.split("/");
 			name = arr[arr.length-1];
 		}

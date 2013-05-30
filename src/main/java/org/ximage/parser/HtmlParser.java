@@ -20,6 +20,10 @@ import org.jsoup.select.Elements;
 public class HtmlParser {
 	
 	public HtmlDoc extractImages(String url) throws XimageException {
+		if(!Util.validateURL(url)){
+			throw new XimageException("404", "Invalid/Malformed URL");
+		}
+
 		HtmlDoc html = new HtmlDoc();
 		try {
 			Document doc = Jsoup.connect(url).userAgent("Mozilla").get();  //It’s recommended to specify a “userAgent” in Jsoup, to avoid HTTP 403 error messages
@@ -71,7 +75,7 @@ public class HtmlParser {
 		SizeFilter sz = new SizeFilter();
 		HtmlDoc html = sz.fetchImageSize(doc);
 		
-		if(Util.isNull(uri) || html.getImages().isEmpty()){
+		if(html.getImages().isEmpty()){
 			throw new XimageException("400", "Invalid Image URL");
 		}
 		Image image = new Image();

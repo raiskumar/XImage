@@ -3,7 +3,7 @@
   <groupId>Ximage</groupId>
   <artifactId>Ximage</artifactId>
   <packaging>jar</packaging>
-  <version>1.1</version>
+  <version>1.2</version>
   <name>Ximage</name>
   
 	<dependencies>

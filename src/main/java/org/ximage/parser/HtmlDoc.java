@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class HtmlDoc {
 	private String title;
-	List<HtmlImage> images = new ArrayList<HtmlImage>();
+	private List<HtmlImage> images = new ArrayList<HtmlImage>();
 	
 	public String getTitle() {
 		return title;
@@ -87,5 +87,9 @@ public class HtmlDoc {
 			}
 		}
 
+	}
+	
+	public boolean isEmpty(){
+		return images.isEmpty();
 	}
 }

@@ -10,3 +10,6 @@ build/
 
 #target file which has jar
 target/
+
+#test directory
+test-output/

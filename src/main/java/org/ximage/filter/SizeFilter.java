@@ -9,9 +9,8 @@ import java.util.Collections;
 
 import javax.imageio.ImageIO;
 
-import org.ximage.Image;
-import org.ximage.common.XimageException;
 import org.ximage.common.Util;
+import org.ximage.common.XimageException;
 import org.ximage.parser.HtmlDoc;
 import org.ximage.parser.HtmlDoc.HtmlImage;
 
@@ -25,7 +24,7 @@ import org.ximage.parser.HtmlDoc.HtmlImage;
  */
 
 public class SizeFilter implements Filter {
-	final static private int MINIMUM_LENGTH = 50;
+	final static private int MINIMUM_LENGTH = 50;  //minimum width AND height of image
 	
 	public HtmlDoc execute(HtmlDoc doc) throws XimageException {
 		if(Util.isNull(doc)){
