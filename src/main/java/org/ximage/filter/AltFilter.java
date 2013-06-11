@@ -10,10 +10,11 @@ import org.ximage.parser.HtmlDoc;
 import org.ximage.parser.HtmlDoc.HtmlImage;
 
 /**
- * Select images which satisfy below condition
- * 1. alt = alt + imageName
- * 1. If any of the alt text matches with the page title
- * In above 2 cases images will be sent 2 next filter for processing
+ * Concatanate imageName to alt value i.e. alt += imageName 
+ * Then Select images which satisfy below condition
+ * 
+ * If any of the alt text matches with the page title then it should be added to output
+ * In case non of the image satisfied above criteria then return the original object
  *  
  * @author Siddheshwar 
  * @email rai.skumar@gmail.com
@@ -25,8 +26,8 @@ public class AltFilter implements Filter {
 			throw new XimageException("500", "Parsing failed");
 		}
 		HtmlDoc processed = new HtmlDoc();
-		processed.setTitle(doc.getTitle());
 		String title = doc.getTitle();
+		processed.setTitle(title);
 		
 		for(HtmlImage image: doc.getImages()){
 			String alt = image.getAlt();
@@ -36,7 +37,7 @@ public class AltFilter implements Filter {
 				processed.addImage(image);
 			}
 		}
-		if(processed.getImages().size() >=1 )
+		if(processed.getImages().size() > 0 )
 			return processed;
 		else 
 			return doc;

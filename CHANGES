@@ -1,9 +1,15 @@
 Ximage Change Log
 
+*** Release 1.4 (2013-June-11)
+ * TestNG test cases completed
+
+*** Release 1.3 (2013-June-2)
+ * Refactored code
+
 *** Release 1.2 (2013-May-31)
- *1. Removed option to provide HTTP proxy. Now client can set proxy before invoking API.
+ *1. Removed option to provide HTTP proxy inside service. Now client can set proxy before invoking API.
        Details : http://docs.oracle.com/javase/6/docs/technotes/guides/net/proxies.html
- *2. Added test cases
+ *2. Added Unit/Integration test cases
 
 *** Release 1.1 (2013-May-21)
  * Refactored code for reability, Added .gitignore file, improved package names

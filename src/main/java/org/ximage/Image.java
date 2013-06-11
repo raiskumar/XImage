@@ -2,11 +2,12 @@ package org.ximage;
 
 /**
  * Represents Image object
+ * 
  * @author Siddheshwar rai.skumar@gmail.com
  * @created 14th May '13
- *
+ * 
  */
-public class Image{
+public class Image {
 	private String url;
 	private int width;
 	private int height;
@@ -34,9 +35,10 @@ public class Image{
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	
-	public String toString(){
-		return "widthXheight: "+width+"X"+height+" ;url: "+ url ;
-	}
 
+	@Override
+	public String toString() {
+		return "Image [url=" + url + ", width=" + width + ", height=" + height
+				+ "]";
+	}
 }

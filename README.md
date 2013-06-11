@@ -13,9 +13,13 @@ Services Supported :
 3. getImageDimension(uri); //Returns width and height of the given image
 
 How to Use :
+
 Ximage ximage = new Ximage();
 Image image= service.getArticleImage(uri);  
 System.out.println("Image :"+ image.getUrl());
+
+Jar Dependency :
+jsoup : http://jsoup.org
 
 --------------------
 Status :
