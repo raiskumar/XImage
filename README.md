@@ -13,9 +13,9 @@ It applies heuristic technique to find one image which is for the given article.
 3. getImageDimension(uri); //Returns width and height of the given image
 
 ###How to Use :
-Ximage ximage = new Ximage();
-Image image= service.getArticleImage(uri);  
-System.out.println("Image :"+ image.getUrl());
+**Ximage ximage = new Ximage();**
+**Image image= service.getArticleImage(uri);**
+**System.out.println("Image :"+ image.getUrl());**
 
 ###Jar Dependency :
 jsoup : http://jsoup.org
