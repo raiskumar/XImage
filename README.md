@@ -14,7 +14,9 @@ It applies heuristic technique to find one image which is for the given article.
 
 ###How to Use :
 **Ximage ximage = new Ximage();**
+
 **Image image= service.getArticleImage(uri);**
+
 **System.out.println("Image :"+ image.getUrl());**
 
 ###Jar Dependency :
