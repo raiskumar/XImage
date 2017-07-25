@@ -1,6 +1,7 @@
-###Ximage : Extracts image from a URL/URI
+### Ximage : Extracts image from a URL/URI
+Library can be used to scrape any url and find the main image on the page. Quite handy if you want to find main image from a news article.  
 
-##About :
+## About :
 
 Java library for extracting images from a web link/url.
 Ximage uses Jsoup library to parse html and then extract images from it.
@@ -12,14 +13,14 @@ It applies heuristic technique to find one image which is for the given article.
 2. getAllImages(uri);  //Returns all images from the html page
 3. getImageDimension(uri); //Returns width and height of the given image
 
-###How to Use :
-**Ximage ximage = new Ximage();**
+### How to Use :
+```
+Ximage ximage = new Ximage();
+Image image= service.getArticleImage(uri);
+System.out.println("Image :"+ image.getUrl());
+```
 
-**Image image= service.getArticleImage(uri);**
-
-**System.out.println("Image :"+ image.getUrl());**
-
-###Jar Dependency :
+### Jar Dependency :
 jsoup : http://jsoup.org
 
 
